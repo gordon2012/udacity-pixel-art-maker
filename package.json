@@ -4,7 +4,7 @@
   "description": "* [Instructions](#instructions)\r * [Contributing](#contributing)",
   "main": "designs.js",
   "scripts": {
-    "start": "browser-sync --no-notify -s"
+    "start": "browser-sync --no-notify -s -f \"*\""
   },
   "repository": {
     "type": "git",
