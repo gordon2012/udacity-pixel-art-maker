@@ -1,0 +1,23 @@
+{
+  "name": "udacity-pixel-art-maker",
+  "version": "1.0.0",
+  "description": "* [Instructions](#instructions)\r * [Contributing](#contributing)",
+  "main": "designs.js",
+  "scripts": {
+    "start": "browser-sync --no-notify -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gordon2012/udacity-pixel-art-maker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gordon2012/udacity-pixel-art-maker/issues"
+  },
+  "homepage": "https://github.com/gordon2012/udacity-pixel-art-maker#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6"
+  }
+}
