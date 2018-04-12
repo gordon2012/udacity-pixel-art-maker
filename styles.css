@@ -1,41 +1,112 @@
+/* Base */
 body {
+    margin: 0;
     text-align: center;
-    padding-bottom: 5em;
 }
 
+header {
+    /* border: 5px solid blue; */
+    background: #ccc;
+    /* color: white; */
+}
 h1 {
     font-family: Monoton;
-    font-size: 70px;
     margin: 0.2em;
+}
+
+aside {
+    /* border: 5px solid magenta; */
+}
+
+aside > div {
+    border: 5px solid blue;
+    padding: 0 1em;
+}
+.control {
+    /* width: 6em; */
+    border: 1px solid red;
+
+    display: flex;
+}
+
+label {
 }
 
 h2 {
     margin: 1em 0 0.25em;
 }
-
 h2:first-of-type {
     margin-top: 0.5em;
 }
+input[type=number] {
+    /* width: 5em; */
+    /* width: 100%; */
+}
 
+footer {
+    /* border: 5px solid lime; */
+    background: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+main {
+    /* border: 5px solid red; */
+}
 table,
 tr,
 td {
     border: 1px solid black;
 }
-
 table {
     border-collapse: collapse;
     margin: 0 auto;
 }
-
 tr {
     height: 20px;
 }
-
 td {
     width: 20px;
 }
 
-input[type=number] {
-    width: 6em;
+/* Mobile Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
+
+/* Grid Layout */
+@supports(grid-area: auto) {
+    @media screen and (min-width: 40em) {
+        h1 {
+            font-size: 70px;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "h h"
+                "s c"
+                "f f";
+        }
+        header { grid-area: h; }
+        aside  { grid-area: s; }
+        main   { grid-area: c; }
+        footer { grid-area: f; }
+
+        aside {
+            /* border: 5px solid blue; */
+
+        }
+        aside > div {
+            /* border: 5px solid red; */
+        }
+
+    }
 }

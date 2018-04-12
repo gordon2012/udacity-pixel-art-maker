@@ -1,27 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pixel Art Maker!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body ondragstart="return false;" ondrop="return false;">
-    <h1>Lab: Pixel Art Maker</h1>
+    <header>
+        <h1>Lab: Pixel Art Maker</h1>
+    </header>
 
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="20">
-        Grid Width:
-        <input type="number" id="inputWeight" name="width" min="1" value="20">
-        <input type="submit">
-    </form>
+    <aside>
+        <div class="tool">
+            <h2>Grid</h2>
+            <div class="control">
+                <label>Height</label>
+                <input type="number" id="inputHeight" name="height" min="1" value="10">
+            </div>
+            <div class="control">
+                <label>Width</label>
+                <input type="number" id="inputWeight" name="width" min="1" value="10">
+            </div>
+        </div>
 
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
+        <div>
+            <h2>Color</h2>
+            <div class="control">
+                <input type="color" id="colorPicker">
+            </div>
+        </div>
+    </aside>
 
-    <h2>Design Canvas</h2>
-    <table id="pixelCanvas"></table>
+    <main>
+        <h2>Design Canvas</h2>
+        <table id="pixelCanvas"></table>
+    </main>
+
+    <footer>
+        <span>Copyright 2018 Gordon Doskas</span>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="designs.js"></script>
